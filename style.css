@@ -51,7 +51,7 @@ nav {
 }
 
 .social-links {
-  margin: 20px 0;
+  margin: 5px 0;
   text-align: center;
 }
 .social-links img {
@@ -142,6 +142,117 @@ About.html {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.about-page {
+  position: relative;
+}
+
+/* Background image stays + add vibrant overlay */
+.about-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Image + vibrant gradient overlay */
+  background: 
+    linear-gradient(135deg, rgba(0, 188, 212, 0.7), rgba(255, 87, 34, 0.6), rgba(76, 175, 80, 0.5)),
+    url('ana2.webp') no-repeat center center;
+
+  background-size: cover;
+  z-index: -1;
+}
+/* =========================
+   ABOUT PAGE (MATCHED TO SERVICES STYLE)
+   ========================= */
+
+/* Background like services page */
+.about-page {
+  background: linear-gradient(135deg, #00bcd4, #ff5722, #4caf50);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Keep background image + overlay */
+.about-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(0, 188, 212, 0.6), rgba(255, 87, 34, 0.5), rgba(76, 175, 80, 0.4)),
+    url('ana2.webp') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* MAIN CONTENT CARD (same feel as services card) */
+.about-page .about-container {
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  max-width: 750px;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.about-page .about-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings (match services style colors) */
+.about-page h1 {
+  text-align: center;
+  color: #ff5722;
+  margin-bottom: 15px;
+}
+
+.about-page h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-top: 20px;
+}
+
+/* Paragraphs */
+.about-page p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* TOP NAV BUTTON AREA (MATCH SERVICES NAV STYLE) */
+.about-page .about-footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS (same as services page) */
+.about-page .about-footer button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* HOVER (same behavior as services) */
+.about-page .about-footer button:hover {
+  background: #00bcd4;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Services page */
