@@ -1,18 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Security Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Security Services</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Services">Services </a></li>
-        <li><a href="Contact">Contact</a></li>
-        <li><a href="About Us">About Us</a></li>
-        <li><a href="Privacy Policy">Privacy Policy</a></li>
-    </nav>
-    
+<body class="services-page"> <!-- Scoped only to services page -->
+
+  <!-- Navigation moved to top -->
+  <nav class="services-nav">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='services.html'">Services</button>
+    <button onclick="window.location.href='contact.html'">Contact</button>
+    <button onclick="window.location.href='about.html'">About Us</button>
+    <button onclick="window.location.href='privacy.html'">Privacy Policy</button>
+  </nav>
+
+  <header class="services-header">
+    <h1>✨ Application Security Services ✨</h1>
+  </header>
+
+  <main class="services-content">
+    <section class="service-block">
+      <h3>🔒 Security Testing</h3>
+      <p>Comprehensive security testing to identify vulnerabilities and ensure your applications are protected against potential threats.<br>
+      <em>Example: Cloud application security assessment</em></p>
+    </section>
+
+    <section class="service-block">
+      <h3>📜 Compliance and Standards</h3>
+      <p>We help ensure your applications meet industry standards and regulatory requirements.<br>
+      <em>Example: PCI DSS, HIPAA, GDPR compliance assessments</em></p>
+    </section>
+
+    <section class="service-block">
+      <h3>💻 Secure Development Practices</h3>
+      <p>We provide guidance and training to help your development team integrate security into their workflow.<br>
+      <em>Example: Secure coding practices, threat modeling</em></p>
+    </section>
+
+    <section class="service-block">
+      <h3>⚡ Specialized Services</h3>
+      <p>We offer specialized services tailored to your specific needs, such as penetration testing, code review, and incident response planning.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Our First Website Project</p>
+  </footer>
+
 </body>
 </html>
