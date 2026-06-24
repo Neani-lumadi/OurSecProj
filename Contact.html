@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@
       <h1>Get in Touch</h1>
       <p>Please fill in your details below and we’ll get back to you.</p>
 
-      <form>
+      <form id="contactForm">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
 
@@ -38,7 +38,32 @@
 
         <button type="submit">Submit</button>
       </form>
+
+      <!-- Contact Details Section -->
+      <div class="contact-details">
+        <p><h2>Contact Us Directly</h2></p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:bongania@dugsonconsulting.co.za">
+            bongania@dugsonconsulting.co.za
+          </a>
+        </p>
+        <p>
+          <strong>Call Us:</strong>
+          <a href="tel:+27127775211">
+            +27 12 777 5211
+          </a>
+        </p>
+      </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      alert("Thank you for writing to us, we will contact you in 24 to 48 hours");
+      this.reset(); 
+    });
+  </script>
 </body>
 </html>
