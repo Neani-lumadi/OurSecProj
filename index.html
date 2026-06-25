@@ -16,8 +16,9 @@
       <li><a href="contact.html" class="contact-button">Contact</a></li>
     </ul>
   </nav>
-  <br>
-  <br>
+
+  <br><br>
+
   <!-- Main Content -->
   <header>
     <h1>Application Security Webpage</h1>
@@ -26,49 +27,169 @@
   </header>
 
   <div class="buttons">
-  <button onclick="window.location.href='https://youtu.be/Dp019cWu1cg?si=q4U5FLCsLx37yDsu'" class="watch-video">
-    Watch Video
-  </button>
-  <button class="purchase">Purchase Now</button>
+    <button onclick="window.location.href='https://youtu.be/Dp019cWu1cg?si=q4U5FLCsLx37yDsu'" class="watch-video">
+      Watch Video
+    </button>
+
+    <!-- Purchase Button -->
+    <button class="purchase" id="openPopup">Purchase Now</button>
+    <!-- POPUP / MODAL -->
+<div id="purchaseModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <h2>Application Security Services & Prices</h2>
+    <p>Select from our available services below:</p>
+
+    <div class="service-list">
+      <div class="service-item">
+        <h3>Vulnerability Assessment</h3>
+        <p>Identify weaknesses in your web or mobile application.</p>
+        <span class="price">R2,500</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Penetration Testing</h3>
+        <p>Simulated attacks to test the security of your application.</p>
+        <span class="price">R4,500</span>
+      </div>
+
+      <div class="service-item">
+        <h3>API Security Testing</h3>
+        <p>Testing APIs for authentication, authorization and data exposure issues.</p>
+        <span class="price">R3,000</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Secure Code Review</h3>
+        <p>Review source code for vulnerabilities and insecure coding practices.</p>
+        <span class="price">R3,500</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Security Consultation</h3>
+        <p>Guidance on securing applications, architecture and compliance.</p>
+        <span class="price">R1,500</span>
+      </div>
+    </div>
+  </div>
 </div>
+  </div>
 
-  <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <!-- POPUP / MODAL -->
+  <div id="purchaseModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Application Security Services & Prices</h2>
+      <p>Select from our available services below:</p>
 
- <div class="container">
+      <div class="service-list">
+        <div class="service-item">
+          <h3>Vulnerability Assessment</h3>
+          <p>Identify weaknesses in your web or mobile application.</p>
+          <span class="price">R2,500</span>
+        </div>
+
+        <div class="service-item">
+          <h3>Penetration Testing</h3>
+          <p>Simulated attacks to test the security of your application.</p>
+          <span class="price">R4,500</span>
+        </div>
+
+        <div class="service-item">
+          <h3>API Security Testing</h3>
+          <p>Testing APIs for authentication, authorization and data exposure issues.</p>
+          <span class="price">R3,000</span>
+        </div>
+
+        <div class="service-item">
+          <h3>Secure Code Review</h3>
+          <p>Review source code for vulnerabilities and insecure coding practices.</p>
+          <span class="price">R3,500</span>
+        </div>
+
+        <div class="service-item">
+          <h3>Security Consultation</h3>
+          <p>Guidance on securing applications, architecture and compliance.</p>
+          <span class="price">R1,500</span>
+        </div>
+      </div>
+
+      <button class="contact-order" onclick="window.location.href='contact.html'">Contact to Order</button>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br>
+
+  <div class="container">
     <div class="column">
-  <section class="content">
-    <h3>Application Security</h3>
-    <p>Application security is crucial in today's digital landscape. It involves implementing measures to protect applications from vulnerabilities and threats.</p>
-  </div>
-  </section>
- <div class="column">
-  <section class="content">
-    <h3>Key Areas of Application Security</h3>
-    <p>Some key areas of application security include: Functional Security, Data Protection, and Access Control.</p>
-  </div>
-  </section>
- <div class="column">
-  <section class="content">
-    <h3>Functional Security </h3>
-    <p>Functional security ensures that applications function correctly and securely under various conditions.</p>
+      <section class="content">
+        <h3>Application Security</h3>
+        <p>Application security is crucial in today's digital landscape. It involves implementing measures to protect applications from vulnerabilities and threats.</p>
+      </section>
     </div>
-    </section> 
+
+    <div class="column">
+      <section class="content">
+        <h3>Key Areas of Application Security</h3>
+        <p>Some key areas of application security include: Functional Security, Data Protection, and Access Control.</p>
+      </section>
     </div>
-    <br>
-    <br>
-    <br>
-    
-    
+
+    <div class="column">
+      <section class="content">
+        <h3>Functional Security</h3>
+        <p>Functional security ensures that applications function correctly and securely under various conditions.</p>
+      </section>
+    </div>
+  </div>
+
+  <br><br><br>
+
   <footer>
     <p>&copy; 2026 Our First Website Project</p>
   </footer>
+
+  <!-- JAVASCRIPT FOR POPUP -->
+  <script>
+    const modal = document.getElementById("purchaseModal");
+    const openBtn = document.getElementById("openPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    openBtn.onclick = function() {
+      modal.style.display = "flex";
+    }
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+  const modal = document.getElementById("purchaseModal");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Open popup ONLY when Purchase Now is clicked
+  openBtn.addEventListener("click", function () {
+    modal.style.display = "flex";
+  });
+
+  // Close popup when X is clicked
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Close popup when clicking outside it
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
